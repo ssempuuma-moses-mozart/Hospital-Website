@@ -112,7 +112,7 @@
   let backtotop = select('.back-to-top')
   if (backtotop) {
     const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 200) {
         backtotop.classList.add('active')
       } else {
         backtotop.classList.remove('active')
@@ -305,6 +305,43 @@
       clickable: true
     }
   });
+
+   /**
+   * Intro Carousel
+   */
+    new Swiper('.intro-carousel', {
+      speed: 600,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+      },
+      slidesPerView: 'auto',
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      }
+    });
+
+   /**
+   * Events slider
+   */
+    new Swiper('.events-slider', {
+      speed: 600,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      slidesPerView: 'auto',
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      }
+    });
+  
 
   /**
    * Animation on scroll
